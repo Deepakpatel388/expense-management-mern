@@ -1,0 +1,29 @@
+{
+  "name": "expensemanagement",
+  "version": "1.0.0",
+  "description": "expence management system",
+  "main": "expenseServer.js",
+  "author": "Deepak Anand Patel",
+  "license": "MIT",
+  "dependencies": {
+    "@ant-design/icons": "^5.1.4",
+    "colors": "^1.4.0",
+    "concurrently": "^8.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.3",
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^7.2.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node expenseServer.js",
+    "server": "nodemon expenseServer.js",
+    "client": "yarn --cwd ./client run start",
+    "dev": "concurrently -k \"yarn run start\" \"yarn run client\" "
+  }
+}
